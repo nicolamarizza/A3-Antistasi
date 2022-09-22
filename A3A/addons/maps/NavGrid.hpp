@@ -13,4 +13,5 @@ class NavGrid {
     tem_anizay = QPATHTOFOLDER(Antistasi_tem_anizay.tem_anizay\navGrid.sqf);
     Tembelan = QPATHTOFOLDER(Antistasi_Tembelan.Tembelan\navGrid.sqf);
     vt7 = QPATHTOFOLDER(Antistasi_vt7.vt7\navGrid.sqf);
+    cup_chernarus_A3 = QPATHTOFOLDER(Antistasi_cup_chernarus_A3.cup_chernarus_A3\navGrid.sqf);
 };

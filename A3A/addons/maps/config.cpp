@@ -95,5 +95,10 @@ class CfgMissions
             briefingName = $STR_antistasi_mission_info_vt7_mapname_text;
             directory = "x\A3A\addons\maps\Antistasi_vt7.vt7";
         };
+        class Antistasi_cup_chernarus_A3
+        {
+            briefingName = $STR_antistasi_mission_info_cup_chernarus_A3_mapname_text;
+            directory = "x\A3A\addons\maps\Antistasi_cup_chernarus_A3.cup_chernarus_A3";
+        };
     };
 };
