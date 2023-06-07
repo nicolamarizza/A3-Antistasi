@@ -42,19 +42,39 @@
 ["breachingExplosivesTank", [["SatchelCharge_Remote_Mag", 1], ["DemoCharge_Remote_Mag", 2]]] call _fnc_saveToTemplate;
 
 ///////////////////////////
+//  Official Uniforms  //
+///////////////////////////
+
+//Uniforms given to AI Rebels
+private _rebUniformsAI = [
+    // multi
+    "U_B_afou_ubacs_mm14", "U_B_afougf_yt_m88str_multicam_01", 
+    // forest
+    "U_B_afougf_yt_m88str_dub_dpm03", "U_B_afougf_yt_m88str_dub_dpm04", "U_B_afougf_yt_m88str_dubok01"
+];
+
+///////////////////////////
 //  Rebel Starting Gear  //
 ///////////////////////////
 
 private _initialRebelEquipment = [
-    "CUP_sgun_slamfire", "CUP_srifle_LeeEnfield", "CUP_srifle_LeeEnfield_rail",
-    "CUP_1Rnd_12Gauge_Pellets_No00_Buck", "CUP_1Rnd_12Gauge_Pellets_No3_Buck", "CUP_10x_303_M",
-    "CUP_hgun_TaurusTracker455", "CUP_6Rnd_45ACP_M",
-    ["CUP_launch_RPG18", 50],
+    "rhs_weap_ak74m", "rhs_weap_ak74m_camo",
+    "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_camo_AK", "CUP_10x_303_M",
+    "rhs_weap_pya", "rhs_mag_9x19_17",
+    ["launch_RPG7_F", 5],
+    ["rhs_rpg7_PG7VL_mag", 10],
     ["IEDUrbanSmall_Remote_Mag", 10], ["IEDLandSmall_Remote_Mag", 10], ["IEDUrbanBig_Remote_Mag", 3], ["IEDLandBig_Remote_Mag", 3],
     "CUP_HandGrenade_RGD5", "SmokeShell",
-    "CUP_V_I_Carrier_Belt", "CUP_V_I_Guerilla_Jacket", "CUP_V_I_RACS_Carrier_Rig_2", "CUP_V_I_RACS_Carrier_Rig_wdl_2",
-    "CUP_V_RUS_Smersh_New_Light", "CUP_V_OI_TKI_Jacket1_06", "CUP_V_OI_TKI_Jacket5_05", "CUP_V_OI_TKI_Jacket5_06", "CUP_V_OI_TKI_Jacket3_04",
-    "B_FieldPack_cbr", "B_FieldPack_khk", "B_FieldPack_oli","B_AssaultPack_cbr","B_AssaultPack_rgr","B_AssaultPack_khk",
+    // backpacks
+    "bp_ngu_eagle_green", "bp_ngu_eagle_green_eng", "bp_afougf_eagle_mm14", "bp_afougf_eagle_medic", 
+    "bp_afougf_fast_zhaba_01", "bp_afougf_fast_mm14_01",
+
+    // vests multi
+    "rhsusf_spcs_ocp_teamleader", "rhsusf_spcs_ocp_squadleader", "rhsusf_spcs_ocp_sniper", "rhsusf_spcs_ocp_rifleman",
+    "vest_afou_spcs_multi01", "vest_afou_spcs_multi02", "vest_afougf_gl_mm14",
+    // vests forest
+    "vest_afou_tacvest_green", "vest_mbav_ngu_light", "vest_afougf_gl_des6col",
+
     "Binocular"
 ];
 
@@ -73,6 +93,7 @@ _initialRebelEquipment append ["Chemlight_blue","Chemlight_green","Chemlight_red
 
 ["initialRebelEquipment", _initialRebelEquipment] call _fnc_saveToTemplate;
 
+//Uniforms given to Player Rebels
 private _rebUniforms = [
     "CUP_I_B_PARA_Unit_2",
     "CUP_I_B_PARA_Unit_6",
@@ -95,34 +116,16 @@ private _rebUniforms = [
     "U_IG_leader",
     "U_IG_Guerrilla_6_1",
     "U_I_G_resistanceLeader_F"
-];          //Uniforms given to Player Rebels
+];
 
-private _rebUniformsAI = [
-    "CUP_U_I_GUE_Anorak_01",
-    "CUP_U_I_GUE_Anorak_03",
-    "CUP_U_I_GUE_Anorak_02",
-    "CUP_U_I_GUE_WorkU_01",
-    "CUP_U_I_GUE_WorkU_02",
-    "CUP_U_I_GUE_Flecktarn2",
-    "CUP_U_I_GUE_Flecktarn3",
-    "CUP_U_I_GUE_Flecktarn",
-    "CUP_U_I_GUE_Flecktarn4",
-    "CUP_U_I_GUE_Woodland1"
-];          //Uniforms given to AI Rebels
+_rebUniforms append _rebUniformsAI;
 
-["uniforms", _rebUniforms] call _fnc_saveToTemplate;         //These Items get added to the Arsenal
+//These Items get added to the Arsenal
+["uniforms", _rebUniforms] call _fnc_saveToTemplate;
 
-["headgear", [
-    "CUP_H_C_Beanie_02",
-    "CUP_H_C_Beret_03",
-    "CUP_H_C_Beret_04",
-    "CUP_H_C_Ushanka_01",
-    "CUP_H_C_Ushanka_02",
-    "CUP_H_C_Ushanka_03",
-    "CUP_H_Ger_Boonie2_Flecktarn",
-    "CUP_H_UKR_Fedora",
-    "H_Bandanna_camo"
-    ]] call _fnc_saveToTemplate;          //Headgear used by Rebell Ai until you have Armored Headgear.
+// Headgear used by Rebell Ai until you have Armored Headgear.
+// None since ukr army already has issued helmets
+["headgear", []] call _fnc_saveToTemplate;
 
 /////////////////////
 ///  Identities   ///
